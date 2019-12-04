@@ -28,7 +28,8 @@ items:
   - name: "Josh Juneau"
     title: "Jakarta EE / Java EE Developer and Author"
     twitter_handle: "javajuneau"
-    img: "jjuneau.png"
+    img: ""
+    #jjuneau.png
     bio: "<p>Josh Juneau works as an application developer, system analyst, and database administrator. He primarily develops using Java and other Java Virtual Machine (JVM) languages. He is a frequent contributor to the Oracle Technology Network and Java Magazine and has written several books on Java and Java EE for Apress. Josh was a JCP Expert Group member for JSR 372 and JSR 378.</P>
                 <p>He is a member of the Apache NetBeans developer community, a Java Champion, the leader of the Chicago Java Users Group OSS Initiative, and a regular on the Java OffHeap podcast.</p>"
   - name: "Tanja Obradovic"

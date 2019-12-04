@@ -53,8 +53,8 @@
               <td>{{ .presenter }}</td>
               
               <td class="text-center">
-              <a class="btn btn-primary btn-wide" href="{{ .vod }}" title="Session video for session '{{.name}}'">
-                <i class="fa fa-play fa-2x"></i> <span class="sr-only">Session video for session '{{.name}}'</span>
+              <a class="btn btn-primary btn-wide" href="{{ .vod }}" title="{{ i18n "agenda-session-recording-button-alt" . }}">
+                <i class="fa fa-play fa-2x"></i> <span class="sr-only">{{ i18n "agenda-session-recording-button-alt" . }}</span>
               </a></td>
             </tr>
             {{ end }}

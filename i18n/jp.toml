@@ -15,3 +15,30 @@ other = "発表者名"
 
 [agenda-session-recording]
 other = "セッション記録"
+
+[agenda-session-recording-button-alt]
+other = "セッション{{ .name }}のセッションビデオ"
+
+[committee-carousel-title]
+other = "プログラム委員会に会う"
+
+[committee-carousel-content]
+other = "JakartaOne Livestreamイベントのセッションと基調講演は、Jakarta &trade;からのボランティアで構成される独立したプログラム委員会によって選ばれたことを誇りに思います。 EEおよびクラウドネイティブJavaコミュニティ！"
+
+[committee-carousel-button-text]
+other = "もっと詳しく知る"
+
+[committee-twitter-follow-text]
+other = "Twitterで{{ .name }}をフォローしてください！"
+
+[footer-get-social-title]
+other = "ソーシャルを取得"
+
+[footer-get-social-content]
+other = "公式カンファレンスのTwitterハンドル<a href='https://www.twitter.com/@JakartaOneConf'>@JakartaOneConf</a>をフォローして、ライブイベントの更新、発表者の発表、ニュースなどを入手してください！"
+
+[footer-jakarta-callout-content]
+other = "参加により、Jakarta&trade; EEはコミュニティ主導のコラボレーションとクラウドのオープンイノベーションの実現に焦点を当てています"
+
+[footer-jakarta-callout-button-text]
+other = "もっと詳しく知る"
