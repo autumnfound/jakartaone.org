@@ -1,0 +1,34 @@
+{{$currLang:=.Page.Lang }} 
+{{$langBase:=index .Site.Data $currLang}} 
+{{$events := (index $langBase).conferences.items}}
+<section class="active-events">
+  <h2 class="h4 brand-primary fw-700">{{ i18n "upcoming-events-header" }}</h2>
+  <table class="table table-hover">
+    <thead class="sr-only">
+      <tr>
+        <th scope="col">Date of event</th>
+        <th scope="col">Name of event</th>
+        <th scope="col">More information</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ $count := 0 }}
+      {{ range sort $events "end_date" }}
+        {{ if (time .end_date).After now }}
+        {{ $count := add $count 1 }}
+        <tr>
+          <td>{{ .date }}</td>
+          <td><a href="{{ .url }}">{{ if .icon }}<i class="{{ .icon }} margin-right-10" aria-hidden="true"></i>{{ end }}{{ .name }}
+          </a></td>
+          <td><a class="primary" href="{{ .url }}" title="{{ i18n "upcoming-events-learn-more-title" }} {{ .name }}">{{ i18n "upcoming-events-learn-more" }}</a></td>
+        </tr>
+        {{ end }}
+      {{ end }}
+      {{ if eq $count 0 }}
+      <tr>
+        <td colspan="3">No current events to display</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</section>

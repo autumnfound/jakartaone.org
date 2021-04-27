@@ -7,150 +7,545 @@
  * 
  * Contributors:
  *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
+ *   Martin Lowe <martin.lowe@eclipse-foundation.org>
  * 
  * SPDX-License-Identifier: EPL-2.0
 */
-
+.toolbar-row {
+  font-size: 16px;
+  padding: 16px 0;
+}
 .featured-jumbotron {
-  h1,h2,h3,h4,h5,h6 {
-   color:inherit;
-   text-transform: uppercase;
-  }
-  #jakarta-one-logo {
-    width:70%;
-    margin-top:60px;
-    margin-bottom:6px;
+    h1, h2, h3, h4, h5, h6 {
+        color: inherit;
+        font-weight: 700;
+    }
+    h2, h3 {
+        letter-spacing: 2px;
+    }
+    p {
+        margin-bottom: 30px;
+        &.small {
+            font-size: 18px;
+        }
+    }
+    .btn-simple {
+        text-transform: uppercase;
+        padding: 10px 20px;
+    }
+    .content a {
+        font-weight: 700;
+        &:link, &:visited {
+            color: @brand-primary !important;
+        }
+    }
+}
+.featured-jumbotron-tall {
+  & {
+    min-height: calc(85vh);
   }
   h2 {
-   &:after {
-      border-bottom:3px solid @brand-primary;
-      width:200px;
-      height:5px;
-      display:block;
-      content:"";
-      margin:15px auto 0;
-    }
+    font-size: 72px;
+    margin-top: 150px;
   }
-  
-  h3{
-    font-weight:700;
-    margin-bottom:1.2em;
-  }
-  h2, h3{
-   letter-spacing:2px;
-  }
-  p {
-    margin-bottom:30px;
-    &.small{
-      font-size:18px;
-    }
-  }
-  .btn-simple {
-    text-transform: uppercase;
-    padding: 10px 20px;
-  }
-  .content a{
-   font-weight:700;
-   &:link, &:visited {
-    color:@brand-primary !important;
-  }
+  p.jumbotron-prefix, p.jumbotron-tagline {
+    font-size: 32px;
+    font-weight: 700;
   }
 }
+.header-default-bg-img.header-default-bg-centered {
+  background-position: center;
+}
+.header-default-bg-img {
+  background-position-y: -47px;
+}
+#header-row {
+    margin-top: 15px;
+}
+.wrapper-logo-default {
+    height: 100%;
+}
+.logo-eclipse-default-mobile {
+    max-width: 200px;
+}
+main {
+    & {
+        border-bottom: none;
+    }
+    h2 {
+        text-transform: uppercase;
+        color: #1b208b;
+        font-weight: 700;
+    }
+    h3 {
+        color: #1b208b;
+        font-weight: 400;
+    }
+    p {
+        font-size: 18px;
+    }
+}
 
-#header-row{
-  display:none;
-
+footer#solstice-footer {
+  & {
+    text-align: center;
+  }
+  i {
+    font-size: 24px;
+  }
+  section {
+    margin-top: 20px;
+  }
+  .nav {
+    margin-left: 0px;
+  }
+  @media (min-width:992px) {
+    & {
+      text-align: left;
+    }
+    & section {
+      margin-top: 0px;
+    }
+    & .nav {
+      margin-left: -15px;
+    }
+  }
 }
 
 .btn-gold {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 18px;
-  color: #feb322;
-  border: 3px solid #feb322;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    color: #feb322;
+    border: 3px solid #feb322;
 }
-
 .btn-gold:focus, .btn-gold.focus {
-  color: #eda822;
-  border-color: #eda822;
+    color: #eda822;
+    border-color: #eda822;
 }
 .btn-gold:visited, .btn-gold.visited {
-  color: #eda822;
-  border-color: #eda822;
+    color: #eda822;
+    border-color: #eda822;
 }
-
 .btn-gold:hover {
-  color: #eda822;
-  border-color: #eda822;
+    color: #eda822;
+    border-color: #eda822;
 }
-
-.btn-gold:active,
-.btn-gold.active {
-  color: #eda822;
-  background-image: none;
-  border-color: #eda822;
+.btn-gold:active, .btn-gold.active {
+    color: #eda822;
+    background-image: none;
+    border-color: #eda822;
 }
-
 .btn-wide {
-  min-width: calc(100% - 20px);
-  margin: 0 10px;
+    min-width: calc(100% - 20px);
 }
-
-#cfp {
-  margin-bottom: -20px;
+.btn.padded {
+  padding: 20px 40px;
 }
-
-main h2 {
-  text-transform: uppercase;
-  color: #1b208b;
-  font-weight: 700;
+.btn-bordered {
+    & {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: @white;
+      border: 2px solid @white;
+    }
+    &:focus, &.focus {
+      color: @white;
+      border-color: @white;
+    }
+    &:visited, &.visited {
+        color: @white;
+        border-color: @white;
+    }
+    &:hover {
+        color: @white;
+        border-color: @white;
+    }
+    &:active, &.active {
+        color: @white;
+        background-image: none;
+        border-color: @white;
+    }
 }
-
-main h3 {
-  color: #1b208b;
-  font-weight: 400;
-}
-
-main p {
-  font-size: 18px;
-}
-
-.cfp-backdrop {
-  background-image: url('images/papers-background.png');
-  background-position: bottom left;
-  height: 100%;
-  position: relative;
-}
-
 .centered-container {
-  width: 100%;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-height: 100px;
 }
-
-section#about {
-  & {
-    color: #fff;
-  }
-
-  h2 {
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .about-backdrop {
-    background-image: url('images/home-about-background.png');
+section.alt {
+    & {
+        color: #fff;
+    }
+    h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        color: #fff;
+    }
+    a:not(.btn-primary) {
+        color: @brand-primary;
+        font-weight: 700;
+    }
+    a:visited, a:hover, a:active {
+        color: #eda822;
+    }
+}
+section#about .backdrop {
+    background-image: url('images/about-background.jpg');
     background-size: cover;
-    height: 100%;
-    width: 100vw;
+}
+section#registration .backdrop {
+    background-image: url('images/registration-background.jpg');
+    background-size: cover;
+    background-position: right;
+}
+section#registration img {
+    max-width: 256px;
+    width: 100%;
+}
+section#get-social { 
+    h2{
+        text-transform: uppercase;
+    }
+    .backdrop {
+        background-image: url('images/get-social-background.jpg');
+        background-size: cover;
+    }
+    p{
+        font-size: 18px;
+    }
+    a {
+        color: #feb322;
+        font-weight: 700;
+    }
+    a:visited, a:hover, a:active {
+        color: #eda822;
+    }
+    .fa.fa-twitter {
+        width: 1.5em;
+        border-radius: 100px;
+        background-color: white;
+        height: 1.5em;
+        text-align: center;
+        color: #1c2183;
+        margin-bottom: 20px;
+    }
+    .fa.fa-twitter::before {
+        line-height: 1.5em;
+    }
+    @media (min-width:768px) {
+        .fa.fa-twitter {
+            margin-bottom: 0px;
+        }
+    }
+}
+section#upcoming-events {
+    background-image:url('images/about-background.jpg');
+    background-size: cover;
+    color:#222;
+    h2 {
+      text-transform: uppercase;
+      font-weight:700;
+      color:#222;
+    }
+    ul li span {
+      border-top: 1px solid #222;
+      padding-top: 5px;
+      margin-top: 10px;
+      display: block;
+      text-transform:uppercase;
+    }
+    .btn {
+      text-transform: uppercase;
+      padding: 6px 60px;
+      border: 4px solid #222;
+      background-color: transparent;
+      color: #222;
+      font-weight: 400;
+    }
+    img {
+      margin:0 auto;
+    }
+}
+section#plan-of-the-day {
+    .backdrop {
+        background-image: url('images/plan-of-the-day-background.jpg');
+        background-size: cover;
+    }
+    li {
+        font-size: 18px;
+    }
+    .btn-primary {
+    	color: @white;
+        width: 67%;
+        border-radius: 10px;
+    }
+}
+section#jakarta-ee p {
+    color: #2f3495;
+}
+#main-menu .navbar-toggle {
+    padding-top: 20px;
+}
+@media (min-width:768px) {
+    #main-menu-wrapper {
+        padding-top: 20px;
+    }
+}
+span.icon::after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    padding-top: 2px;
+    margin-right: 15px;
     position: relative;
-    left: calc(-1 * (100vw - 100%) / 2);
+    bottom: -3px;
+    display: inline-block;
+}
+.icon-backdrop {
+  & {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    background-color: @brand-secondary;
+  }
+  i {
+    font-size: 13em;
+    padding-top: 18%;
+    text-align: center;
+    display: block;
+    color: #fff;
+  }
+  .icon-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .ratio {
+    margin-top: 100%;
   }
 }
-
 // Fix issue with absolute position children not inheriting any height
 // Note, could fix w/ flex, but no IE support for needed feature (5% overall traffic)
 .match-height-item-by-row {
     min-height: 50px;
+}
+// fix for buttons in flex columns being stretched past content
+.flex-column .btn {
+  width: fit-content;
+  margin: auto;
+}
+.speaker-container img {
+	border-radius: 50%;
+	max-height: 200px;
+}
+
+// HOME PAGE LESS 
+#mailing-list-socials {
+  & {
+    background-image: url(/images/vendor/eclipsefdn-solstice-components/featured-story/featured-story-default-bg.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding-top: 75px;
+    padding-bottom: 65px;
+  }
+  ul {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  li {
+    padding-right: 20px;
+  }
+  .btn.padded-sm {
+    padding: 10px 40px;
+  }
+  .container > div:first-of-type {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  @media(min-width:992px) {
+    & .container > div:first-of-type {
+      padding-bottom:0;
+    }
+  }
+}
+
+section.active-events {
+  & {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  table {
+    font-size: 16px;
+  }
+  table tbody tr td{
+    padding: 16px 8px 16px 0;
+  }
+  @media(min-width:992px) {
+    & {
+      margin-top: 0;
+    }
+  }
+}
+
+section.about-home {
+  > .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @media (min-width:992px) {
+    > .container {
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+  }
+}
+
+section.past-events { 
+  & {
+    background-image:url('images/first-banner.png');
+    background-size: cover;
+    margin-bottom: 30px; 
+    padding: 40px 0px;
+  }
+  .event-container {
+    margin-top: 20px;
+  }
+  .event-panel {
+    & {
+      border-radius: 1em;
+      border: none;
+      overflow:hidden;
+      padding: 0;
+      height:100%;
+      text-decoration: none;
+      box-shadow: 4px 6px 9px 0px rgba(0,0,0,0.31);
+    }
+    &:hover {
+      text-decoration: underline
+    }
+    .panel-heading{
+      padding: 0;
+    }
+    .panel-heading img{
+      min-width: 100%;
+    }
+    .panel-body {
+    padding:1em;
+    padding-top:0;
+    }
+  }
+}
+section.host-jakartaone {
+  & {
+    background-image:url('images/host-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #282e70;
+    border-top: 7px #282e70 solid;
+    border-bottom: 7px #282e70 solid;
+  }
+
+  > .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @media (min-width:992px) {
+    > .container {
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+  }
+}
+
+footer#solstice-footer {
+  background: url("images/jakarta9-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: @white;
+
+  h2, a, a.social-media-link {
+    color: @white;
+  }
+
+  a:hover, a.social-media-link:hover {
+    color: #bfbebe;
+  }
+}
+.event-highlight {
+  color: @brand-secondary;
+  font-size: 1.5em;
+}
+img.cover-image {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+.event-testimonials {
+  & {
+    margin-top: 125px;
+    margin-bottom: 100px;
+  }
+  p {
+    color: @brand-secondary;
+  }
+  .carousel .arrow {
+    & {
+      display: inline-block;
+      border: solid #E88208;
+      border-width: 0 2px 2px 0;
+      height: 66px;
+      width: 66px;
+      margin-top: 25%;
+      margin-left: 25%;
+    }
+    
+    &.right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+    
+    &.left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+  }
+  
+  // gets rid of gradients in BS Carousel indicators
+  .right.carousel-control, .left.carousel-control {
+    background: none;
+  }
+}
+
+.centered-container {
+  min-height: initial;
+}
+.eclipsefdn-user-display-heading {
+  font-size: 18px;
+}
+
+// russian event specific code
+#registration {
+    .telegram {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 60px;
+            display: inline-block;
+        }
+        a {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
 }

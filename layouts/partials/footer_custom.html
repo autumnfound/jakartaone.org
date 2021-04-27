@@ -1,0 +1,93 @@
+<!-- 
+  Copyright (c) 2019 Eclipse Foundation, Inc.
+
+  This program and the accompanying materials are made available under the
+  terms of the Eclipse Public License v. 2.0 which is available at
+  http://www.eclipse.org/legal/epl-2.0.
+
+  Contributors:
+    Martin Lowe <martin.lowe@eclipse-foundation.org>
+
+  SPDX-License-Identifier: EPL-2.0
+-->
+<section class="alt" id="mailing-list-socials">
+  <div class="backdrop padding-bottom-100 padding-top-100">
+    <div class="container">
+      <div class="col-md-12 vertical-align brand-secondary match-height-item-by-row">
+        <span>Join our Mailing List</span>
+        <a href="https://accounts.eclipse.org/mailing-list/jakarta.ee-community" class="btn btn-secondary padded-sm margin-left-30">Sign up now</a>
+      </div>
+      <div class="col-md-12 match-height-item-by-row vertical-align">
+        <ul class="list-inline">
+          <li>
+            <a href="{{ $.Site.Params.facebook_url | default "https://www.facebook.com/eclipse.org" }}">
+              <i class="fa fa-facebook"></i><span class="sr-only">{{ i18n "footer-sr-facebook-text" }}</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ $.Site.Params.linkedin_url | default " https://www.linkedin.com/company/eclipse-foundation" }}" title="{{ i18n "footer-sr-linkedin-account" }}">
+              <i class="fa fa-linkedin"></i> <span class="sr-only">{{ i18n "footer-sr-linkedin-text" }}</span>
+          </a>
+          </li>
+          <li>
+            <a href="{{ $.Site.Params.twitter_url | default "https://twitter.com/EclipseFdn" }}">
+              <i class="fa fa-twitter"></i><span class="sr-only">{{ i18n "footer-sr-twitter-text" }}</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ $.Site.Params.youtube_url | default "https://www.youtube.com/user/EclipseFdn" }}">
+              <i class="fa fa-youtube"></i><span class="sr-only">{{ i18n "footer-sr-youtube-text" }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ if not .Page.Params.hide_footer_events }}
+{{$currLang:=.Page.Lang }}
+{{$langBase:=index .Site.Data $currLang}}
+{{$events := (index $langBase).conferences.items}}
+<section id="upcoming-events" class="padding-top-30 padding-bottom-30 text-center">
+  <div class="container">
+    <h2 class="white">{{ i18n "footer-our-events-title" }}</h2>
+    <div class="row">
+      <div class="col-sm-24">
+        <ul class="list-inline margin-top-20">
+          {{ range $events}}
+            {{$t := time .end_date }}
+            {{ if $t.After now }}
+            <li>
+              <a href="{{.url}}"><img width="150" class="img-responsive" src="{{ .logo_color }}"></a>
+              <span>{{ .name }}</span>
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+        <p><a class="btn btn-secondary margin-top-30" href='{{ "/past-events" | relLangURL }}'>{{ i18n "past-events-header" }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Modal for usage with agendas -->
+<div id="eclipsefdn-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{ i18n "agenda-modal-close-alt" }}"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+        <div class="margin-top-10">
+        	<p id="modal-presenter"></p>
+        	<p id="modal-time"></p>
+        </div>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
